@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SplunkCoffeeIT Consulting | Securitate SIEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .text-green-cyber { color: #00ff41; }
+        .bg-green-cyber { background-color: #00ff41; }
+        .border-green-cyber { border-color: #00ff41; }
+        .glow:hover {
+            box-shadow: 0 0 15px #00ff41;
+            transition: 0.3s;
+        }
+        .coffee-gradient {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigare -->
+    <nav class="p-6 border-b border-green-900 flex justify-between items-center sticky top-0 bg-black z-50">
+        <!-- MODIFICAREA AICI: -->
+        <div class="text-2xl font-bold text-green-cyber tracking-tighter flex items-center gap-2">
+            <i class="fas fa-mug-hot"></i> Splunk <span class="text-white italic">with Coffee IT</span>
+        </div>
+        
+        <div class="space-x-6 hidden md:block">
+            <a href="#poveste" class="hover:text-green-cyber transition">Povestea Noastră</a>
+            <a href="#servicii" class="hover:text-green-cyber transition">Servicii</a>
+            <a href="#tehnologie" class="hover:text-green-cyber transition">Stack Tehnologic</a>
+            <a href="#contact" class="bg-green-cyber text-black px-4 py-2 rounded font-bold glow">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Securitate prin <span class="text-green-cyber text-shadow">Claritate.</span></h1>
+        <p class="text-xl md:text-2xl max-w-2xl text-gray-400">Consultanță Splunk SIEM (Cisco) cu o experiență de peste un deceniu în orchestrarea datelor.</p>
+        <div class="mt-8">
+            <a href="#poveste" class="border border-green-cyber text-green-cyber px-8 py-3 rounded-full hover:bg-green-cyber hover:text-black transition duration-300">Descoperă Povestea</a>
+        </div>
+    </header>
+
+    <!-- Povestea cu Cafeaua -->
+    <section id="poveste" class="py-20 coffee-gradient">
+        <div class="container mx-auto px-6">
+            <div class="bg-black/70 p-10 rounded-lg border-l-4 border-green-cyber max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-green-cyber mb-6 italic">SIEM-ul se face mai bine cu o cafea bună</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    Totul a început acum 10 ani. Nu cu un cod complicat, ci cu o cană de cafea neagră și un ecran plin de loguri nesfârșite. Am înțeles atunci că securitatea nu e despre algoritmi reci, ci despre atenția la detalii care apare în acele momente de liniște ale dimineții.
+                </p>
+                <p class="text-lg leading-relaxed mb-4">
+                    De un deceniu, transformăm haosul informațional în tablouri de bord clare. În timp ce cafeaua se infuzează, noi configurăm fluxuri de date complexe. Considerăm că un SIEM bine reglat este ca un espresso perfect: concentrat, fără reziduuri și exact ceea ce ai nevoie pentru a te trezi la realitatea amenințărilor cibernetice înainte ca ele să producă daune.
+                </p>
+                <p class="text-lg leading-relaxed font-bold text-green-cyber">
+                    Noi nu doar monitorizăm loguri; noi distilăm siguranța.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicii & Tehnologii -->
+    <section id="servicii" class="py-20 bg-zinc-950">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Expertiza Noastră <span class="text-green-cyber">_</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-green-cyber transition">
+                    <i class="fas fa-bolt text-4xl text-green-cyber mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Splunk SIEM (Cisco)</h3>
+                    <p class="text-gray-400">Implementare, optimizare și management pentru ecosistemul Cisco Splunk la nivel enterprise.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-green-cyber transition">
+                    <i class="fas fa-microchip text-4xl text-green-cyber mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Ingestie Syslog-ng</h3>
+                    <p class="text-gray-400">Arhitecturi de colectare a datelor de înaltă performanță, scalabile și securizate.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 border border-gray-800 rounded-xl hover:border-green-cyber transition">
+                    <i class="fas fa-robot text-4xl text-green-cyber mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Automatizare Ansible</h3>
+                    <p class="text-gray-400">Deployment-uri Infrastructure as Code pentru a elimina eroarea umană din securitate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tehnologie -->
+    <section id="tehnologie" class="py-20 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl mb-10 text-gray-500 font-mono">STACK-UL NOSTRU TEHNOLOGIC</h3>
+            <div class="flex flex-wrap justify-center gap-10 opacity-70">
+                <span class="text-3xl font-bold"><i class="fas fa-server"></i> Syslog-ng</span>
+                <span class="text-3xl font-bold text-green-cyber"><i class="fas fa-search"></i> Splunk</span>
+                <span class="text-3xl font-bold"><i class="fab fa-ansible"></i> Ansible</span>
+                <span class="text-3xl font-bold text-blue-500"><i class="fas fa-network-wired"></i> Cisco</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-6 max-w-2xl text-center">
+            <h2 class="text-4xl font-bold mb-8 italic">Hai să bem o cafea și să discutăm securitate</h2>
+            <p class="mb-10 text-gray-400">Ești gata să îți securizezi infrastructura? Contactează echipa noastră de experți.</p>
+            
+            <div class="grid grid-cols-1 gap-6 text-left">
+                <div class="bg-black p-6 rounded-lg border border-green-900">
+                    <p class="text-green-cyber font-mono mb-2"># contact_info</p>
+                    <p><i class="fas fa-envelope text-green-cyber mr-2"></i> contact@coffeeit.ro</p>
+                    <p><i class="fas fa-phone text-green-cyber mr-2"></i> +40 7xx xxx xxx</p>
+                    <p><i class="fas fa-location-dot text-green-cyber mr-2"></i> București, România (sau Remote)</p>
+                </div>
+            </div>
+            
+            <div class="mt-10">
+                <p class="text-sm text-gray-600 italic">"Securitatea este un proces, nu un produs. Dar procesul începe mereu cu o cafea."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-10 border-t border-gray-900 text-center text-gray-600 text-sm font-mono">
+        &copy; 2024 CoffeeIT Consulting. Built with <span class="text-green-cyber">Ansible</span> & <span class="text-green-cyber">Love</span>.
+    </footer>
+
+</body>
+</html>
