@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehnologii | SplunkCoffeeIT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; }
+        .text-green-cyber { color: #00ff41; }
+        .border-green-cyber { border-color: #00ff41; }
+        body[lang="ro"] .lang-en { display: none !important; }
+        body[lang="en"] .lang-ro { display: none !important; }
+        .flag-icon { width: 20px; height: 14px; display: inline-block; }
+        .tool-card { background: rgba(20, 20, 20, 0.8); border: 1px solid #1a1a1a; padding: 2rem; border-radius: 0.5rem; margin-bottom: 2rem; }
+    </style>
+</head>
+<body lang="ro">
+
+    <!-- Navigare (Identica cu index) -->
+    <nav class="p-6 border-b border-green-900 flex justify-between items-center sticky top-0 bg-black z-50">
+        <div class="text-xl font-bold text-green-cyber tracking-tighter">
+            <a href="index.html"><i class="fas fa-mug-hot"></i> Splunk <span class="text-white italic">with Coffee IT</span></a>
+        </div>
+        <div class="flex items-center space-x-6">
+            <a href="index.html" class="hover:text-green-cyber transition font-bold uppercase text-xs tracking-widest">
+                <span class="lang-ro">Acasă</span><span class="lang-en">Home</span>
+            </a>
+            <button onclick="toggleLanguage()" class="flex items-center gap-2 bg-zinc-900 border border-green-900 px-3 py-1 rounded">
+                <div class="lang-ro text-xs font-bold uppercase">EN</div>
+                <div class="lang-en text-xs font-bold uppercase">RO</div>
+            </button>
+        </div>
+    </nav>
+
+    <header class="py-16 px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold">
+            <span class="lang-ro">Arsenalul nostru <span class="text-green-cyber">Tehnic</span></span>
+            <span class="lang-en">Our Technical <span class="text-green-cyber">Stack</span></span>
+        </h1>
+    </header>
+
+    <main class="container mx-auto px-6 max-w-5xl">
+        
+        <!-- SPLUNK -->
+        <section class="tool-card border-l-4 border-green-cyber">
+            <div class="flex items-center gap-4 mb-6">
+                <i class="fas fa-search text-4xl text-green-cyber"></i>
+                <h2 class="text-3xl font-bold">Splunk (Cisco)</h2>
+            </div>
+            <div class="lang-ro space-y-4">
+                <p class="text-green-cyber font-bold">Istoric:</p>
+                <p>Fondat în 2003 în San Francisco, Splunk a revoluționat modul în care companiile analizează "datele mașină" (logs). De la un simplu instrument de căutare a logurilor, a devenit platforma lider de observabilitate și securitate.</p>
+                <p>În 2024, achiziția de către <strong>Cisco</strong> a marcat o nouă eră, integrând capabilitățile Splunk direct în infrastructura globală de rețele. Noi folosim Splunk de peste 10 ani pentru a oferi vizibilitate totală asupra amenințărilor.</p>
+            </div>
+            <div class="lang-en space-y-4">
+                <p class="text-green-cyber font-bold">History:</p>
+                <p>Founded in 2003 in San Francisco, Splunk revolutionized how companies analyze "machine data." It evolved from a simple log search tool into the leading observability and security platform.</p>
+                <p>In 2024, the acquisition by <strong>Cisco</strong> marked a new era, integrating Splunk's capabilities directly into global network infrastructure. We have been using Splunk for over 10 years to provide total threat visibility.</p>
+            </div>
+        </section>
+
+        <!-- SYSLOG-NG -->
+        <section class="tool-card border-l-4 border-blue-500">
+            <div class="flex items-center gap-4 mb-6">
+                <i class="fas fa-server text-4xl text-blue-500"></i>
+                <h2 class="text-3xl font-bold">Syslog-ng</h2>
+            </div>
+            <div class="lang-ro space-y-4">
+                <p class="text-blue-500 font-bold">Istoric:</p>
+                <p>Creat în 1998 de Balázs Scheidler, syslog-ng a apărut ca o soluție la limitările vechiului protocol syslog. A introdus conceptul de filtrare avansată și rutare a logurilor pe baza conținutului.</p>
+                <p>Este pilonul nostru pentru colectarea datelor. Îl utilizăm pentru a curăța, filtra și trimite datele către Splunk într-un mod eficient, reducând costurile de licențiere prin eliminarea zgomotului inutil din loguri.</p>
+            </div>
+            <div class="lang-en space-y-4">
+                <p class="text-blue-500 font-bold">History:</p>
+                <p>Created in 1998 by Balázs Scheidler, syslog-ng was developed to solve the limitations of the original syslog protocol. It introduced advanced filtering and content-based log routing.</p>
+                <p>It is our backbone for data collection. We use it to clean, filter, and ship data to Splunk efficiently, reducing licensing costs by stripping away unnecessary log noise.</p>
+            </div>
+        </section>
+
+        <!-- ANSIBLE -->
+        <section class="tool-card border-l-4 border-red-600">
+            <div class="flex items-center gap-4 mb-6">
+                <i class="fab fa-ansible text-4xl text-red-600"></i>
+                <h2 class="text-3xl font-bold">Ansible</h2>
+            </div>
+            <div class="lang-ro space-y-4">
+                <p class="text-red-600 font-bold">Istoric:</p>
+                <p>Lansat în 2012 de Michael DeHaan și achiziționat ulterior de Red Hat (IBM), Ansible a transformat managementul configurațiilor prin simplitatea sa (agentless). Folosește YAML, făcând automatizarea ușor de citit și documentat.</p>
+                <p>În proiectele noastre, Ansible este "creierul" care instalează și configurează automat serverele de Splunk și syslog-ng, asigurând o configurație identică și sigură de fiecare dată.</p>
+            </div>
+            <div class="lang-en space-y-4">
+                <p class="text-red-600 font-bold">History:</p>
+                <p>Launched in 2012 by Michael DeHaan and later acquired by Red Hat (IBM), Ansible transformed configuration management through its agentless simplicity. Using YAML, it makes automation easy to read and document.</p>
+                <p>In our projects, Ansible is the "brain" that automatically installs and configures Splunk and syslog-ng servers, ensuring identical and secure configurations every time.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="p-10 text-center text-zinc-700 text-xs font-mono uppercase">
+        <a href="index.html" class="text-green-cyber hover:underline">← Înapoi la pagina principală / Back Home</a>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const currentLang = body.getAttribute('lang');
+            const newLang = currentLang === 'ro' ? 'en' : 'ro';
+            body.setAttribute('lang', newLang);
+            localStorage.setItem('site_lang', newLang);
+        }
+        window.onload = () => {
+            const savedLang = localStorage.getItem('site_lang');
+            if (savedLang) { document.body.setAttribute('lang', savedLang); }
+        }
+    </script>
+</body>
+</html>
