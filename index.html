@@ -21,15 +21,13 @@
             transition: 0.3s;
         }
         .coffee-gradient {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1000');
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1000');
             background-size: cover;
             background-position: center;
         }
 
-        /* LOGICA FIXATA PENTRU LIMBA */
-        /* Daca limba este RO, ascunde tot ce este EN */
+        /* LOGICA PENTRU LIMBA - REPARATA */
         body[lang="ro"] .lang-en { display: none !important; }
-        /* Daca limba este EN, ascunde tot ce este RO */
         body[lang="en"] .lang-ro { display: none !important; }
         
         .flag-icon {
@@ -44,38 +42,45 @@
 
     <!-- Navigare -->
     <nav class="p-6 border-b border-green-900 flex justify-between items-center sticky top-0 bg-black z-50">
+        <!-- Logo -->
         <div class="text-xl md:text-2xl font-bold text-green-cyber tracking-tighter flex items-center gap-2">
-            <i class="fas fa-mug-hot"></i> Splunk <span class="text-white italic">with Coffee IT</span>
+            <a href="index.html" class="flex items-center gap-2">
+                <i class="fas fa-mug-hot"></i> Splunk <span class="text-white italic">with Coffee IT</span>
+            </a>
         </div>
         
+        <!-- Meniu Navigare -->
         <div class="flex items-center space-x-4 md:space-x-8">
             <div class="hidden md:flex space-x-6">
-                <a href="#poveste" class="hover:text-green-cyber transition font-bold uppercase text-xs tracking-widest">
-                    <span class="lang-ro">Poveste</span><span class="lang-en">Story</span>
+                <a href="index.html" class="hover:text-green-cyber transition font-bold uppercase text-xs tracking-widest text-green-cyber">
+                    <span class="lang-ro">Acasă</span><span class="lang-en">Home</span>
+                </a>
+                <a href="tehnologii.html" class="hover:text-green-cyber transition font-bold uppercase text-xs tracking-widest">
+                    <span class="lang-ro">Tehnologii</span><span class="lang-en">Technologies</span>
                 </a>
                 <a href="#servicii" class="hover:text-green-cyber transition font-bold uppercase text-xs tracking-widest">
                     <span class="lang-ro">Servicii</span><span class="lang-en">Services</span>
                 </a>
             </div>
 
-            <!-- Buton Schimbare Limba -->
+            <!-- Buton Schimbare Limba (Steaguri) -->
             <button onclick="toggleLanguage()" class="flex items-center gap-2 bg-zinc-900 border border-green-900 px-3 py-2 rounded hover:border-green-cyber transition">
                 <div class="lang-ro flex items-center gap-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" class="flag-icon">
-                    <span class="text-xs font-bold uppercase">English</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" class="flag-icon" alt="EN">
+                    <span class="text-xs font-bold uppercase">EN</span>
                 </div>
                 <div class="lang-en flex items-center gap-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg" class="flag-icon">
-                    <span class="text-xs font-bold uppercase">Română</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg" class="flag-icon" alt="RO">
+                    <span class="text-xs font-bold uppercase">RO</span>
                 </div>
             </button>
 
-            <a href="#contact" class="bg-green-cyber text-black px-4 py-2 rounded font-bold glow text-xs uppercase tracking-tighter">Contact</a>
+            <a href="#contact" class="bg-green-cyber text-black px-4 py-2 rounded font-bold glow text-xs uppercase">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="h-[70vh] flex flex-col justify-center items-center text-center px-4">
+    <header class="h-[60vh] flex flex-col justify-center items-center text-center px-4">
         <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
             <span class="lang-ro">Securitate prin <span class="text-green-cyber">Claritate.</span></span>
             <span class="lang-en">Security through <span class="text-green-cyber">Clarity.</span></span>
@@ -89,7 +94,7 @@
     <!-- Povestea cu Cafeaua -->
     <section id="poveste" class="py-20 coffee-gradient">
         <div class="container mx-auto px-6">
-            <div class="bg-black/90 p-8 md:p-12 rounded-lg border-l-4 border-green-cyber max-w-4xl mx-auto">
+            <div class="bg-black/90 p-8 md:p-12 rounded-lg border-l-4 border-green-cyber max-w-4xl mx-auto shadow-2xl">
                 <h2 class="text-3xl font-bold text-green-cyber mb-6 italic">
                     <span class="lang-ro">SIEM-ul se face mai bine cu o cafea bună</span>
                     <span class="lang-en">SIEM is best crafted over a good coffee</span>
@@ -99,14 +104,21 @@
                     <div class="lang-ro">
                         <p>Totul a început acum un deceniu. Nu cu linii de cod complexe, ci cu o cană de cafea neagră și un ecran plin de loguri nesfârșite. Am înțeles atunci că securitatea cibernetică este despre acea atenție la detalii care apare în momentele de liniște ale dimineții.</p>
                         <p>De 10 ani, ajutăm companiile să transforme haosul informațional în tablouri de bord clare. În timp ce cafeaua se infuzează, noi configurăm fluxuri de date prin <strong>syslog-ng</strong> și automatizăm infrastructuri cu <strong>Ansible</strong>.</p>
-                        <p class="text-green-cyber font-bold">Noi nu doar monitorizăm loguri; noi distilăm siguranța.</p>
+                        <p class="text-green-cyber font-bold pt-4 uppercase tracking-widest">Noi nu doar monitorizăm loguri; noi distilăm siguranța.</p>
                     </div>
 
                     <div class="lang-en">
                         <p>It all started a decade ago. Not with complex lines of code, but with a cup of black coffee and a screen filled with endless logs. I realized then that cybersecurity is about the attention to detail that emerges in those quiet morning moments.</p>
                         <p>For 10 years, we've been helping companies transform informational chaos into clear dashboards. While the coffee brews, we configure data streams via <strong>syslog-ng</strong> and automate infrastructures using <strong>Ansible</strong>.</p>
-                        <p class="text-green-cyber font-bold">We don't just monitor logs; we distill safety.</p>
+                        <p class="text-green-cyber font-bold pt-4 uppercase tracking-widest">We don't just monitor logs; we distill safety.</p>
                     </div>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="tehnologii.html" class="text-green-cyber border-b border-green-cyber hover:text-white hover:border-white transition pb-1">
+                        <span class="lang-ro">Află mai multe despre tool-urile noastre →</span>
+                        <span class="lang-en">Learn more about our tools →</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -115,37 +127,37 @@
     <!-- Servicii -->
     <section id="servicii" class="py-20 bg-zinc-950">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-16">
+            <h2 class="text-3xl font-bold mb-16 uppercase tracking-widest">
                 <span class="lang-ro">Servicii Specializate</span>
                 <span class="lang-en">Specialized Services</span>
             </h2>
             
             <div class="grid md:grid-cols-3 gap-8 text-left">
                 <!-- Card 1 -->
-                <div class="p-8 bg-black border border-zinc-800 rounded-xl hover:border-green-cyber transition">
-                    <i class="fas fa-shield-halved text-3xl text-green-cyber mb-4"></i>
+                <div class="p-8 bg-black border border-zinc-800 rounded-xl hover:border-green-cyber transition group">
+                    <i class="fas fa-shield-halved text-3xl text-green-cyber mb-4 group-hover:scale-110 transition"></i>
                     <h3 class="text-xl font-bold mb-4">Splunk SIEM</h3>
                     <p class="text-gray-400">
-                        <span class="lang-ro">Implementare și optimizare avansată pentru ecosistemul Cisco Splunk.</span>
-                        <span class="lang-en">Advanced deployment and optimization for the Cisco Splunk ecosystem.</span>
+                        <span class="lang-ro">Implementare, raportare și optimizare avansată pentru ecosistemul Cisco Splunk.</span>
+                        <span class="lang-en">Advanced deployment, reporting, and optimization for the Cisco Splunk ecosystem.</span>
                     </p>
                 </div>
                 <!-- Card 2 -->
-                <div class="p-8 bg-black border border-zinc-800 rounded-xl hover:border-green-cyber transition">
-                    <i class="fas fa-server text-3xl text-green-cyber mb-4"></i>
+                <div class="p-8 bg-black border border-zinc-800 rounded-xl hover:border-green-cyber transition group">
+                    <i class="fas fa-server text-3xl text-green-cyber mb-4 group-hover:scale-110 transition"></i>
                     <h3 class="text-xl font-bold mb-4">Syslog-ng</h3>
                     <p class="text-gray-400">
-                        <span class="lang-ro">Colectare performantă a logurilor și rutare inteligentă a datelor.</span>
-                        <span class="lang-en">High-performance log collection and intelligent data routing.</span>
+                        <span class="lang-ro">Arhitecturi de colectare a datelor de înaltă performanță și rutare inteligentă.</span>
+                        <span class="lang-en">High-performance data collection architectures and intelligent routing.</span>
                     </p>
                 </div>
                 <!-- Card 3 -->
-                <div class="p-8 bg-black border border-zinc-800 rounded-xl hover:border-green-cyber transition">
-                    <i class="fas fa-code text-3xl text-green-cyber mb-4"></i>
+                <div class="p-8 bg-black border border-zinc-800 rounded-xl hover:border-green-cyber transition group">
+                    <i class="fas fa-code text-3xl text-green-cyber mb-4 group-hover:scale-110 transition"></i>
                     <h3 class="text-xl font-bold mb-4">Ansible</h3>
                     <p class="text-gray-400">
-                        <span class="lang-ro">Automatizarea infrastructurii și a politicilor de securitate (IaC).</span>
-                        <span class="lang-en">Infrastructure and security policy automation (IaC).</span>
+                        <span class="lang-ro">Automatizarea infrastructurii de securitate prin Infrastructure as Code.</span>
+                        <span class="lang-en">Automating security infrastructure through Infrastructure as Code.</span>
                     </p>
                 </div>
             </div>
@@ -159,19 +171,24 @@
                 <span class="lang-ro">Să discutăm la o cafea</span>
                 <span class="lang-en">Let's talk over coffee</span>
             </h2>
-            <div class="bg-zinc-900 p-8 rounded-xl border border-green-900 text-left">
+            <div class="bg-zinc-900 p-8 rounded-xl border border-green-900 text-left shadow-lg">
                 <p class="mb-2 text-green-cyber font-mono text-xs"># contact_info</p>
-                <p class="text-xl font-bold">contactit@coffeeit.ro</p>
-                <p class="text-gray-500 mt-4">București, România / Global (Remote)</p>
+                <p class="text-xl font-bold mb-1">contact@coffeeit.ro</p>
+                <p class="text-gray-500">București, România / Global (Remote)</p>
             </div>
+            
+            <p class="mt-12 text-zinc-600 italic text-sm">
+                <span class="lang-ro">"Securitatea este un proces, nu un produs. Dar procesul începe mereu cu o cafea."</span>
+                <span class="lang-en">"Security is a process, not a product. But the process always starts with a coffee."</span>
+            </p>
         </div>
     </section>
 
-    <footer class="p-10 text-center text-zinc-700 text-xs font-mono uppercase">
-        &copy; 2024 CoffeeIT Consulting | Splunk & Coffee
+    <footer class="p-10 text-center text-zinc-700 text-[10px] font-mono uppercase tracking-[0.3em] border-t border-zinc-900">
+        &copy; 2024 CoffeeIT Consulting // SIEM // Syslog-ng // Ansible
     </footer>
 
-    <!-- LOGICA SCRIPTULUI -->
+    <!-- LOGICA PENTRU SCHIMBARE LIMBA -->
     <script>
         function toggleLanguage() {
             const body = document.body;
@@ -181,7 +198,7 @@
             localStorage.setItem('site_lang', newLang);
         }
 
-        // Pastreaza limba la refresh
+        // Se asigură că limba rămâne salvată la navigare sau refresh
         window.onload = () => {
             const savedLang = localStorage.getItem('site_lang');
             if (savedLang) {
@@ -191,6 +208,3 @@
     </script>
 </body>
 </html>
-
-
-
